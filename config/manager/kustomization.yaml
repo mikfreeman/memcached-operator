@@ -5,4 +5,4 @@ kind: Kustomization
 images:
 - name: controller
   newName: mikfreeman/memcache_operator
-  newTag: 1.0.0
+  newTag: 2.0.0

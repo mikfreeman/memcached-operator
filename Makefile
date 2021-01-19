@@ -77,6 +77,10 @@ docker-build: test
 docker-push:
 	docker push ${IMG}
 
+# Undeploy controller from the configured Kubernetes cluster
+undeploy:
+	$(KUSTOMIZE) build config/default | kubectl delete -f -
+
 # find or download controller-gen
 # download controller-gen if necessary
 controller-gen:
